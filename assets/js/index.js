@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Auto-advance carousel
-  setInterval(nextSlide, 3000);
+  setInterval(nextSlide, 5000);
 
   // Mobile Navigation Toggle
   const hamburger = document.createElement("div");
