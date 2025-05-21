@@ -19,7 +19,7 @@
         z-index: 999;
         font-size: 6rem;
         text-align: center;
-        color: whitesmoke;
+        color: rgb(0, 0, 0);
         text-shadow: 1px 2px 5px #41260b;
         width: 100%;
         white-space: nowrap;
@@ -38,6 +38,7 @@
         background-position: center;
         background-size: cover;
         box-shadow: 3px 3px 25px rgb(37, 37, 37);
+        opacity: 0.8;
 
     }
 
@@ -203,6 +204,7 @@
         background-position: center;
         background-size: cover;
         box-shadow: 3px 3px 20px rgba(128, 0, 128, 0.692);
+        opacity: 0.8;
 
 
     }
@@ -326,7 +328,7 @@
 
     & .textbanner {
         position: absolute;
-        top: 150px;
+        top: 250px;
         z-index: 999;
         margin: 20px;
         font-size: 5rem;
@@ -350,6 +352,7 @@
         background-position: center;
         background-size: cover;
         box-shadow: 3px 3px 20px rgb(255, 153, 0);
+        opacity: 0.8;
 
     }
 
@@ -403,9 +406,11 @@
         }
     }
 
+
+
     @media (min-width: 760px) {
         .textbanner {
-            font-size: 2.5rem;
+            font-size: 3rem;
             /* Adjust font size for smaller screens */
         }
     }
@@ -437,12 +442,12 @@
 
     & .textbanner {
         position: absolute;
-        top: 150px;
+        top: 250px;
         z-index: 999;
         margin: 20px;
         font-size: 6rem;
         text-align: center;
-        color: rgb(9, 98, 133);
+        color: rgb(0, 0, 0);
         text-shadow: 2px 2px 4px #ffffff;
         width: 100%;
         white-space: nowrap;
@@ -460,6 +465,7 @@
         background-image: url(../images/Screenshot\ 2025-05-12\ 170956.png);
         background-position: center;
         background-size: cover;
+        opacity: 0.8;
 
     }
 
