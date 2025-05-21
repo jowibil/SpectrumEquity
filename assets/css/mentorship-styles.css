@@ -1,0 +1,221 @@
+:root {
+    --fs-base: 0.85rem;
+    /* = 13.6px */
+    --fs-1: 1.875rem;
+    /* = 30px */
+    --fs-2: 1.5rem;
+    /* = 24px */
+    --fs-3: 1.25rem;
+    /* = 20px */
+    --fs-33: 1rem;
+    /* = 16px */
+    --fs-4: 0.875rem;
+    /* = 14px */
+    --fs-5: 0.75rem;
+    /* = 12px */
+    --ls-1: 0.120rem;
+
+    --primary-color: #4E1F00;
+    --secondary-color: #FEBA17;
+    --accent-color: #74512D;
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --success-color: #8A9A5B;
+}
+
+/* GRID CSS */
+.page-title {
+    text-align: center;
+    font-size: var(--fs-1);
+    margin: 5rem 0rem 4rem 0rem;
+}
+
+.mentor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 0rem 3rem 0rem;
+    max-width: 800px;
+    margin: auto;
+
+}
+
+.mentor-card {
+    background: #ad845b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Inria-serif', serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.788);
+    transition: transform 0.3s ease;
+}
+
+.mentor-card:hover {
+    transform: translateY(-5px);
+}
+
+.mentor-card-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin: 1rem 0rem;
+}
+
+.mcard-title {
+    font-family: 'Inria-serif', serif;
+    font-size: var(--fs-2);
+}
+
+.mcard-text {
+    font-family: 'Inria-serif', serif;
+    font-size: var(--fs-33);
+}
+
+.mentors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 0rem 3rem 0rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.mentors-title {
+    font-family: "Bebas Neue", serif;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.mentors-card {
+    background: white;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    font-family: 'Inria-serif', serif;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.788);
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.mentors-card:hover {
+    transform: translateY(-5px);
+}
+
+.mentors-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+.mentors-content{
+    padding: 1.5rem;
+    color: black;
+    
+}
+
+.mentors-name {
+    font-size: 24px;
+    font-family: "Inter", serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.mentors-desc {
+    font-size: 18px;
+    font-family: "Raleway", serif;
+    color: var(--secondary-color);
+
+}
+
+.mentors-text {
+    font-size: 16px;
+    font-family: "Inter", serif;
+    text-align: justify;
+}
+
+
+/* HERO CSS */
+.mhero {
+    position: relative;
+    height: 80vh;
+    background: url('../images/mentorship-bg.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.mhero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Inria-serif', serif;
+}
+
+.mhero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.mhero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    .mentor-grid,
+    .mentors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title {
+        font-size: var(--fs-2);
+    }
+
+    .mentors-title {
+        font-size: var(--fs-2);
+        letter-spacing: 2px;
+    }
+
+    .mhero h1 {
+        font-size: 32px;
+    }
+
+    .mhero p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mhero h1 {
+        font-size: 28px;
+    }
+
+    .mhero {
+        height: 70vh;
+    }
+
+    .mentors-desc {
+        font-size: 16px;
+    }
+
+    .mentors-text {
+        font-size: 14px;
+    }
+}

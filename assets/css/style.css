@@ -1,0 +1,482 @@
+/* Global Styles */
+:root {
+    --primary-color: #4E1F00;
+    --secondary-color: #FEBA17;
+    --accent-color: #74512D;
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --success-color: #8A9A5B;
+
+    --fs-base: 0.85rem;
+    /* = 13.6px */
+    --fs-1: 1.875rem;
+    /* = 30px */
+    --fs-2: 1.5rem;
+    /* = 24px */
+    --fs-3: 1.25rem;
+    /* = 20px */
+    --fs-33: 1rem;
+    --fs-4: 0.875rem;
+    /* = 14px */
+    --fs-5: 0.75rem;
+    /* = 12px */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #FFEEAD;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.carousel-btn {
+    display: inline-block;
+    background-color: var(--success-color);
+    color: var(--light-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--success-color);
+    color: var(--light-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 2rem 0;
+    border-radius: 8px;
+    height: 400px;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0.05rem;
+    pointer-events: none;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.carousel-content {
+    background-color: var(--dark-color);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+.carousel-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Section Styles */
+section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    /* or cover if you want cropping */
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: var(--fs-2);
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.card-text {
+    margin-bottom: 1.5rem;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Stats Section */
+.stats {
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.stat-item {
+    margin-bottom: 2rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-text {
+    font-size: 1.1rem;
+}
+
+/* Issues Section */
+.issues-container {
+    margin-top: 2rem;
+}
+
+.section-text {
+    font-size: var(--fs-3);
+}
+
+.issue-tab {
+    background-color: var(--light-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.issue-tab:hover {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+}
+
+.issue-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.issue-content {
+    display: none;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.issue-content.active {
+    display: block;
+}
+
+.issue-content h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+
+.footer-col h3 {
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.footer-col p {
+    text-align: justify;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #555;
+}
+
+/* Responsive Styles */
+/* Mobile First Approach (base styles for smallest screens) */
+/* Carousel Mobile Styles */
+.carousel {
+    height: 300px;
+    margin: 1rem 0;
+}
+
+.carousel-content {
+    padding: 1rem;
+    max-width: 90%;
+}
+
+.carousel-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-content .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.us-title {
+    text-align: center;
+    font-size: 30px;
+    margin: 5rem 0rem 0rem 0rem;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-weight: 900;
+}
+
+.us-container {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    justify-content: space-evenly;
+    margin: 0rem 0rem 3rem 0rem;
+    /* Adjust for larger screens */
+}
+
+.profile {
+    width: 50%;
+    /* Default for smaller screens */
+    padding-top: 2rem;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 180px;
+    /* Adjust size as needed */
+    height: 180px;
+    /* Adjust size as needed */
+    background-color: #FFA500;
+    /* Orange color */
+}
+
+.profile-name {
+    font-size: 1.25rem;
+    /* Equivalent to text-xl */
+    font-family: sans-serif;
+    font-weight: 500;
+    /* Equivalent to font-medium */
+    padding-left: 6px;
+    /* Adjust padding for specific profiles */
+}
+
+/* Media Queries for responsive design */
+/* Small screens (550px and up) */
+@media (max-width: 400px) {
+    .us-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .section-text {
+        font-size: var(--fs-33);
+    }
+}
+
+
+
+@media (min-width: 550px) {
+    .carousel {
+        height: 320px;
+    }
+
+    .carousel-content h2 {
+        font-size: a.7rem;
+    }
+
+    .carousel-content p {
+        font-size: 1rem;
+    }
+
+    .section-text {
+        font-size: var(--fs-3);
+    }
+}
+
+/* Medium screens (650px and up) */
+@media (min-width: 650px) {
+    .carousel {
+        height: 350px;
+    }
+
+    .carousel-content {
+        max-width: 80%;
+        padding: 1.5rem;
+    }
+
+    .carousel-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+    .carousel {
+        height: 380px;
+    }
+
+    .carousel-content {
+        padding: 2rem;
+        max-width: 70%;
+    }
+
+    .carousel-content h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-content p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktops (1024px and up) */
+@media (min-width: 1024px) {
+    .carousel {
+        height: 400px;
+    }
+
+    .carousel-content {
+        max-width: 600px;
+    }
+
+    .profile {
+        width: 20%;
+        /* 1/4 width for larger screens */
+    }
+}

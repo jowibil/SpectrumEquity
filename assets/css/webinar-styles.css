@@ -1,0 +1,236 @@
+:root {
+    --primary-color: #4E1F00;
+    --secondary-color: #FEBA17;
+    --accent-color: #74512D;
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --success-color: #8A9A5B;
+
+    --fs-base: 0.85rem;
+    /* = 13.6px */
+    --fs-1: 1.875rem;
+    /* = 30px */
+    --fs-2: 1.5rem;
+    /* = 24px */
+    --fs-3: 1.25rem;
+    /* = 20px */
+    --fs-33: 1rem;
+    /* = 16px */
+    --fs-4: 0.875rem;
+    /* = 14px */
+    --fs-5: 0.75rem;
+    /* = 12px */
+    --ls-1: 0.120rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-title{
+    text-align: center;
+    font-size: var(--fs-1);
+    margin: 5rem 0rem 4rem 0rem;
+}
+
+.web-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0rem 3rem 0rem;
+    max-width: 800px;
+    margin: auto;
+
+}
+.web-card {
+    background: var(--accent-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: left;
+    font-family: 'Inria-serif', serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.788);
+}
+
+.date-time {
+    align-self: flex-start;
+    color: white;
+    width: 4.25rem;
+    height: 4.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid white;
+    border-radius: 8px;
+    background: var(--primary-color);
+}
+
+.month {
+    font-size: 28px;
+}
+
+.day {
+    font-size: 30px;
+    margin-top: -10px;
+}
+.web-title{
+    font-size: var(--fs-3);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.web-sub{
+    font-size: 1.05rem;
+    text-align: center;
+}
+.web-schedule{
+    background: #EDDAA8;
+    text-align: center;
+    color: black;
+    padding: 0.1rem 0.8rem;
+    border-radius: 8px;
+    align-self: center;
+    margin: 1rem 0rem 3rem 0rem;
+}
+
+
+.web-btn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: 'Inria-serif', serif;
+}
+
+.reg-btn {
+    font-size: var(--fs-2);
+    font-weight: 500;
+    width: 9.375rem;
+    padding: 0.2rem 5rem;
+    background: var(--success-color);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+.reg-btn:hover{
+    background-color: var(--secondary-color);
+    scale: calc(1.1);
+}
+
+
+/*
+
+        MODAL CSS
+
+
+*/
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-content {
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 500px;
+    background: #7b512b;
+    /* brown */
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    color: white;
+}
+
+#modal-close-btn {
+    padding: 10px 15px;
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.3);
+    font: 700 1rem "Inria-serif", sans-serif;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+    color: white;
+    text-align: right;
+}
+
+#modal-close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font: 400 16px "Inria-serif", sans-serif;
+    margin-bottom: 6px;
+    color: white;
+}
+
+input,
+textarea {
+    border-radius: 10px;
+    border: none;
+    padding: 12px;
+    font: 500 16px "Inria-serif", sans-serif;
+    color: black;
+    background: white;
+    resize: none;
+}
+
+#modal-submit-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #D9D9D9;
+    border: none;
+    font: 500 16px "Roboto Condensed", sans-serif;
+    color: black;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline;
+    transition: background-color 0.3s ease;
+}
+
+#modal-submit-btn:hover {
+    background: green;
+    color: var(--light-color);
+    scale: calc(1.05);
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .web-title {
+        font-size: var(--fs-2);
+    }
+    .reg-btn{
+        font-size: var(--fs-3);
+    }
+}
+@media (min-width: 768px) {
+    .web-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
