@@ -1,6 +1,32 @@
 /* Header Styles */
+:root {
+    --primary-color: #4E1F00;
+    --secondary-color: #FEBA17;
+    --accent-color: #74512D;
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --success-color: #8A9A5B;
+
+    --fs-base: 0.85rem;
+    /* = 13.6px */
+    --fs-1: 1.875rem;
+    /* = 30px */
+    --fs-2: 1.5rem;
+    /* = 24px */
+    --fs-3: 1.25rem;
+    /* = 20px */
+    --fs-33: 1rem;
+    --fs-4: 0.875rem;
+    /* = 14px */
+    --fs-5: 0.75rem;
+    /* = 12px */
+}
+
+
+
+
 header {
-    background-color: #FFEEAD;
+    background-color: var(--accent-color);
     border-bottom: 1px solid black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -17,10 +43,7 @@ header {
 }
 
 .logo {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+    height: 100%;
 }
 
 .nav-menu {
@@ -34,9 +57,10 @@ header {
 }
 
 .nav-link {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 500;
+    font-size: var(--fs-33);
     transition: color 0.3s;
     display: block;
     padding: 6px 4px;
@@ -91,21 +115,21 @@ header {
     width: 25px;
     height: 3px;
     margin: 5px 8px;
-    background-color: var(--dark-color);
+    background-color: var(--light-color);
     transition: all 0.3s;
 }
 
 /* Medium screens (650px and up) */
 @media (max-width: 720px){
     header{
-        background: #ffbd59;
+        background: var(--accent-color);
         border-bottom: none;
     }
     .nav-link{
         color: rgb(255, 255, 255);
     }
     .nav-link:hover{
-        color: rgb(0, 0, 0);
+        color: var(--secondary-color);
     }
 }
 
